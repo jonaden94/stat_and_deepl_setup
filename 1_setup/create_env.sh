@@ -9,3 +9,9 @@ conda install nvidia/label/cuda-11.8.0::cuda-toolkit -y # fixes some weird cudnn
 conda install mkl=2024.0.0 -y # fixes some pytorch bug
 pip install numpy==1.26.4
 pip install jupyter
+conda install anaconda::pandas -y
+conda install conda-forge::matplotlib -y
+conda install anaconda::seaborn -y
+pip install tqdm
+conda install anaconda::pillow -y
+conda install anaconda::scikit-learn -y

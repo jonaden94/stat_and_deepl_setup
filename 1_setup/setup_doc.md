@@ -23,4 +23,4 @@ source 1_setup/install_miniforge.sh
 ```
 source 1_setup/create_env.sh
 ```
-* The creation of the environment will take while since Pytorch is quite a big package (roughly 15 minutes).
+* The creation of the environment will take a while (20-25 minutes), mostly because Pytorch is quite a big package.
