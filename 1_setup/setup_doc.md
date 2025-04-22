@@ -12,14 +12,31 @@ source 1_setup/install_miniforge.sh
 ```
 * The installation of miniforge might take 1-2 minutes and you need to reopen your shell after the installation.
 
-# 2. symbolic link to project folder
+# 2. folder structure
 * The setup command that you just ran also created a symbolic link to the project folder. It should be visible as "projects" in your home directory.
-* This is where you should put your code and data.
-* Monitor your disc space regularly. You only have 40 GB in your home directory. A default environment with Pytorch is already 20 GB. So you cannot put unnecessary stuff there.
+* Within the projects folder, there should be a folder that is named after your username. This is where you should put your research repositoy.
+* Monitor your disc space regularly. You only have 40 GB in your home directory. A default environment with Pytorch is already a bit mroe than 20 GB. So you cannot put unnecessary stuff there.
 * You can monitor your disc space with `show-quota`
-
+* In addition to your personal folder named after your username, you should use a shared folder that both you and your group member can access. I already created that folder for you. Create a symbolic link to it in the projects folder by running the command with your name in it:
+```
+# choose the one with your name in it
+ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/duan_fu              $HOME/projects
+ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/steppack_gonzalez    $HOME/projects
+ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/rippberger_niesmann  $HOME/projects
+ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/kohn_bismarck        $HOME/projects
+ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/fritsch_wetzel       $HOME/projects
+```
+* After installation of conda and creation of symbolic links and folders, you should have the following structure in your home directory:
+```
+$HOME
+├── conda     
+└── projects
+    ├── u16701     # your username (this is where your code goes)                 
+    └── duan_fu    # your shared group folder (this is where your data goes)
+```
+* I would not advise you to write code in the shared folder. Rather, you should collaborate on a repository via github.
 # 3. Creating conda environment with Pytorch
-* Once miniforge has been installed and initialized, you can create your own conda environments. The examples in this guide only require pytorch to be installed. If conda is activated, you can install an environment containing pytorch by running the following command:
+* Once miniforge has been installed and initialized, you can create your own conda environments. I already prepared a setup script with many useful packages. If conda is activated, you can install this environment running the following command:
 ```
 source 1_setup/create_env.sh
 ```
