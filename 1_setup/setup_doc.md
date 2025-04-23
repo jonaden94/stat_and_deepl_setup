@@ -17,15 +17,7 @@ source 1_setup/install_miniforge.sh
 * Within the projects folder, there should be a folder that is named after your username. This is where you should put your research repositoy.
 * Monitor your disc space regularly. You only have 40 GB in your home directory. A default environment with Pytorch is already a bit mroe than 20 GB. So you cannot put unnecessary stuff there.
 * You can monitor your disc space with `show-quota`
-* In addition to your personal folder named after your username, you should use a shared folder that both you and your group member can access. I already created that folder for you. Create a symbolic link to it in the projects folder by running the command with your name in it:
-```
-# choose the one with your name in it
-ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/duan_fu              $HOME/projects
-ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/steppack_gonzalez    $HOME/projects
-ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/rippberger_niesmann  $HOME/projects
-ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/kohn_bismarck        $HOME/projects
-ln -s /mnt/vast-kisski/projects/kisski-statis-deep-learning/fritsch_wetzel       $HOME/projects
-```
+* In addition to your personal folder named after your username, you should use a shared folder that both you and your group member can access. I already created that folder for you.
 * After installation of conda and creation of symbolic links and folders, you should have the following structure in your home directory:
 ```
 $HOME
