@@ -21,5 +21,5 @@ conda activate deepl
 
 # running python script
 echo "running script"
-python $HOME/hpc_guide/2_request_resources/submit_job/train.py
+python $HOME/stat_and_deepl_setup/2_request_resources/submit_job/train.py
 echo "Python script executed"

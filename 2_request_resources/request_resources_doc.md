@@ -58,11 +58,12 @@ squeue --me
 ```
 6162082 grete:intera interactive.   u12041 nib00034   RUNNING       0:07     1 ggpu159
 ```
-* You can then ssh into this node via jumphost. This means that you ssh to the compute node via the login node since direct ssh-ing to the compute node is not possible. To do this, you need to add the following specification to the ssh config file. if you forgot how to modify the ssh config file, take a look at the gwdg pad related to this guide. It is described there.
+* You can then ssh into this node via jumphost. This means that you ssh to the compute node via the login node since direct ssh-ing to the compute node is not possible. To do this, you need to add the following specification to the ssh config file. if you forgot how to modify the ssh config file, take a look at the gwdg pad related to this guide. It is described there. **Important**: Do not overwrite your config for the login node. This is supposed to be an additional config for the gpu node!
 ```
 Host ggpu159 # adapt based on the compute node you have been assigned to
    User your_username
    ProxyJump nhr_login
+   IdentityFile ~/.ssh/your_private_key_name
 ```
 * You can then simply use the ``remote-ssh`` extension of VS Code to ssh to the compute node (just as you did to ssh to the login node) and use the resources interactively. For example, you can open the notebook located at ``2_request_resources/interactive/notebook.ipynb`` to create a tensor and put it on a GPU.
 * To use only as much compute resources as necessary, interactive jobs should be run on "GPU slices", i.e. one GPU split up so that it can be used by multiple people. This is specified in the batch script with the ``SBATCH -G 1g.20gb`` option. In principle, it is also possible to request interactive jobs for full GPUs. Similarly, it is possible to run "non-interactive" jobs as in the first example on slices.

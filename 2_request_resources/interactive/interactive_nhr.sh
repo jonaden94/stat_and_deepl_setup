@@ -9,7 +9,6 @@
 # export HTTPS_PROXY="http://www-cache.gwdg.de:3128"
 # export HTTP_PROXY="http://www-cache.gwdg.de:3128"
 
-source /user/henrich1/u12041/.bashrc
 export HTTPS_PROXY="http://www-cache.gwdg.de:3128"
 export HTTP_PROXY="http://www-cache.gwdg.de:3128"
 sleep infinity
